@@ -22,6 +22,5 @@ jobs:
         steps:
             - name: echo a pwoershell
               run: Write-Output "Windows String"
-            - name: Wrong command
-              run: command not exists
-
+            - name: Wrong command fixed
+              run: Write-Output "Windows String new"
