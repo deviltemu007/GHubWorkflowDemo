@@ -23,4 +23,4 @@ jobs:
             - name: echo a pwoershell
               run: Write-Output "Windows String"
             - name: Wrong command fixed
-              run: Write-Output "Windows String new"
+              run: Write-Output "Windows String newwith more loggging"
