@@ -1,5 +1,9 @@
 name: Workflow dir and shell commands
 on: [push]
+defaults:
+    run:
+        shell: bash
+
 
 jobs:
     display-dir-shell_ubutnu:
@@ -13,13 +17,26 @@ jobs:
                 echo $GITHUB_SHA
                 echo $GITHUB_REPOSITORY
                 echo $GITHUB_WORKSPACE
+            - name: change working directory
+              working-directory:  /home/runner/work/GHubWorkflowDemo/
+              run: pwd
     display-dir-shell-windows:
         runs-on: windows-2022
+        defaults:
+            run:
+             shell: pwsh
         steps:
             - name: Display working dir and ls there
               run: |
                 get-location
                 dir
-                echo $GITHUB_SHA
-                echo $GITHUB_REPOSITORY
-                echo $GITHUB_WORKSPACE           
+                echo $env:GITHUB_SHA
+                echo $env:GITHUB_REPOSITORY
+                echo $env:GITHUB_WORKSPACE 
+            - name: Display working dir and ls in pyhton shell
+              shell: python
+
+              run: |
+                import platform
+                print(platform.processor())
+                
