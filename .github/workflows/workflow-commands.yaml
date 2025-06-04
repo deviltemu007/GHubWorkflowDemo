@@ -8,13 +8,13 @@ jobs:
             - name: setting error mesg
               run: echo "::error::Missing something"
             - name: setting error mesg with params
-              run: echo "::error title:error title, file=app.js,line=2,endLine,col=5,endColumn=7::Missing the char"
+              run: echo "::error title=error title, file=app.js,line=2,endLine,col=5,endColumn=7::Missing the char"
             - name: setting debug mesg with params
-              run: echo "::debug title:debug title, file=app.js,line=2,endLine,col=5,endColumn=7::Missing the char"
+              run: echo "::debug title=debug title, file=app.js,line=2,endLine,col=5,endColumn=7::Missing the char"
             - name: setting warning mesg with params
-              run: echo "::warning title:warning title, file=app.js,line=2,endLine,col=5,endColumn=7::Missing the char"
+              run: echo "::warning title=warning title, file=app.js,line=2,endLine,col=5,endColumn=7::Missing the char"
             - name: setting notice mesg with params
-              run: echo "::notice title:notice title, file=app.js,line=2,endLine,col=5,endColumn=7::Missing the char"
+              run: echo "::notice title=notice title, file=app.js,line=2,endLine,col=5,endColumn=7::Missing the char"
             - name: group og logs
               run:  |
                 echo "::group::My group title"
