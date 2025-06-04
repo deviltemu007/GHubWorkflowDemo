@@ -15,4 +15,13 @@ jobs:
               run: echo "::warning title:warning title, file=app.js,line=2,endLine,col=5,endColumn=7::Missing the char"
             - name: setting notice mesg with params
               run: echo "::notice title:notice title, file=app.js,line=2,endLine,col=5,endColumn=7::Missing the char"
-  
+            - name: group og logs
+              run:  |
+                echo "::group::My group title"
+                echo  "inside group"
+                echo "::endgroup"
+            - name: masking a value
+              run: echo "::add-mask::secret string"
+            - name: echo a value
+              run: echo "secret string"
+       
