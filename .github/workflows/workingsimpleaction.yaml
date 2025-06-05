@@ -1,0 +1,14 @@
+name: chekcsimple action out from git
+on: [push]
+jobs:
+    simple-action:
+        runs-on: ubuntu-latest
+        steps:
+            - name: simple js action
+              id: greet
+              uses: actions/hello-world-javascript-action@a3a8eb71ef38e9bd636864f042db69bf06757344
+              with: 
+                      who-to-greet: VinoGayu
+            - name: log greeting time
+              run: echo "${{steps.greet.outputs.time}}"
+
