@@ -1,5 +1,10 @@
 name: repos events
-on: [push, pull_request, issues]
+on: 
+    push: 
+    pull_request: 
+        types: [opened, assigned, edited, reopened, synchronize]
+    issues:
+        types: [opened]
 jobs:
     chekcout-test-action:
         runs-on: ubuntu-22.04
