@@ -1,0 +1,10 @@
+name: repos events
+on: [push, pull_request, issues]
+jobs:
+    chekcout-test-action:
+        runs-on: ubuntu_latest
+        steps:
+            - run: |
+               echo $GITHUB_SHA
+               echo $GITHUB_REF 
+            - uses: actions/checkout@v3
