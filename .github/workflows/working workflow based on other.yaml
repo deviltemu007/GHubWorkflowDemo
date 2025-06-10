@@ -4,7 +4,7 @@ on:
         workflows: [repos events]
         types: [completed]
 jobs:
-    echo-test-action:
+    echo-test:
         runs-on: ubuntu-22.04
         steps:
             - run: echo " i was triggered bcos 'repo events' is completed"
