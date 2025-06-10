@@ -4,7 +4,7 @@ on:
     pull_request: 
         types: [opened, assigned, edited, reopened, synchronize]
     issues:
-        types: [reopened]
+        types: [opened]
 jobs:
     chekcout-test-action:
         runs-on: ubuntu-22.04

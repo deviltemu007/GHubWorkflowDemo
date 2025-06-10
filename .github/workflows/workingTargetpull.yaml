@@ -1,0 +1,21 @@
+name: pull request target events
+on: 
+    
+    pull_request_target: 
+        types: [opened]
+
+jobs:
+    pr-test-action:
+        runs-on: ubuntu_latest
+        steps:
+         - name: commment on new PR
+           uses: actions/github-script@v6
+           with:
+            script: |
+               github.rest.issues.createComment({
+               owner: context.repo.owner,
+               repo: context.repo.repo,
+               issue_number: context.issue.number,
+               body: 'Thanks for contributing',
+               });
+
