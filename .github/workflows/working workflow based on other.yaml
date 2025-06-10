@@ -1,0 +1,10 @@
+name: workflow depend on other workflow
+on: 
+    workflow_run:
+        workflows: [repos events]
+        types: [completed]
+jobs:
+    echo-test-action:
+        runs-on: ubuntu-22.04
+        steps:
+            - run: echo " i was triggered bcos 'repo events' is completed"
