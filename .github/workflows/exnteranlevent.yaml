@@ -1,0 +1,9 @@
+name: External repos event
+on:
+    repository_dispatch:
+
+jobs:
+    echo-strin:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Rpos dispatch event"
