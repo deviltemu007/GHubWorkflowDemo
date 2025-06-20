@@ -7,7 +7,7 @@ jobs:
     stalejobs:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/stale
+            - uses: actions/stale@v8
               with: 
                 stale-issue-message: this is mark as stale mesg"
                 days-before-stale: 5
