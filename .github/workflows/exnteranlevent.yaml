@@ -1,9 +1,13 @@
 name: External repos event
 on:
     repository_dispatch:
+        types: [build]
 
 jobs:
     echo-strin:
         runs-on: ubuntu-latest
-        steps:
-            - run: echo "Rpos dispatch event"
+        steps: 
+            - run: |
+                echo "Rpos dispatch event"
+                echo ${{github.event.client_payload.env}}
+                echo ${{github.event.client_payload.usertype}}
