@@ -1,8 +1,8 @@
-name: stale issues and PRs
+name: stale issues and PR s
 on:
     schedule:
         - cron: "* 16 * * *"
-        - cron: "34,35 16 * * *"        
+        - cron: "37,38 16 * * *"        
 jobs:
     stalejobs:
         runs-on: ubuntu-latest
