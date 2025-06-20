@@ -3,6 +3,9 @@ on:
     workflow_run:
         workflows: [repos events]
         types: [completed]
+        branches:
+            - main
+            
 jobs:
     echo-test:
         runs-on: ubuntu-22.04

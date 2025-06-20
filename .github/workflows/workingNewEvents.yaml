@@ -1,7 +1,23 @@
 name: repos events
 on: 
     push: 
+        branches:
+            - main
+            - "feature/*"
+            - "feature/**"
+        # branches-ignore:
+        #     - develop
+        tags:
+            - v1.*
+            - "!v1.1.1"
+        paths:
+            - "**.js"   
+            - "!app.js" 
     pull_request: 
+        branches:
+            - main
+        paths:
+            - "**.js"   
         types: [opened, assigned, edited, reopened, synchronize]
     issues:
         types: [opened]
